@@ -65,18 +65,4 @@ function normalizeYear(year, formatYear) {
   }
 }
 
-/*
-formatDate(
-  '97/02/18',
-  ['YY', 'MM', 'DD', '/'],
-  ['DD', 'MM', 'YYYY', '.'],
-*/
-
-/*
-function can change separator, reorder date parts,
-         convert year from 4 to 2 digits and back
-When convert from YYYY to YY just use 2 last digit (1997 -> 97)
-When convert from YY to YYYY use 20YY if YY < 30 and 19YY otherwise
-*/
-
 module.exports = formatDate;
