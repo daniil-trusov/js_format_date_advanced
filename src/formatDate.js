@@ -18,6 +18,7 @@ const YEAR_CHECK = 30;
 
 function formatDate(date, fromFormat, toFormat) {
   const dateObj = makeDateObject(date, fromFormat);
+  const separator = toFormat.slice(-1);
   const newDate = [];
 
   for (let i = 0; i < 3; i++) {
@@ -33,11 +34,12 @@ function formatDate(date, fromFormat, toFormat) {
     newDate.push(newPart);
   }
 
-  return newDate.join(toFormat.slice(-1));
+  return newDate.join(separator);
 }
 
 function makeDateObject(date, format) {
-  const dateParts = date.split(format.slice(-1));
+  const separator = format.slice(-1);
+  const dateParts = date.split(separator);
   const dateObj = {};
 
   for (let i = 0; i < 3; i++) {
